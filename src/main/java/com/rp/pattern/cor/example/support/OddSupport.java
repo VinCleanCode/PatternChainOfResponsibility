@@ -6,6 +6,10 @@ public class OddSupport extends Support {
     }
 
     protected boolean resolve(Trouble trouble) {
-        return false;
+        if(trouble.getNumber() % 2 ==1){
+            return true;
+        }else {
+            return false;
+        }
     }
 }

@@ -1,11 +1,17 @@
 package com.rp.pattern.cor.example.support;
 
 public class SpecialSupport extends Support {
-    public SpecialSupport(String name) {
+    private int number;
+    public SpecialSupport(String name, int number) {
         super(name);
+        this.number = number;
     }
 
     protected boolean resolve(Trouble trouble) {
-        return false;
+        if(trouble.getNumber() == number){
+            return true;
+        }else{
+            return false;
+        }
     }
 }
